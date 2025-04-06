@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<img src="C:\Users\CIRO\Pictures\images (5).jfif"width="10%"alt="logo">
+    <title>PELUQUERÍA SERSHI</title>
+
+                    
+                
+
+<style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .background img {
+            position: absolute;
+            width: 150px;
+            height: auto;
+        }
+        
+        header {
+            padding: 2rem 0;
+            text-align: center;
+            background: linear-gradient(to right, #000, #333, #000);
+            box-shadow: 0 2px 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        .logo h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #fff, #e6b800, #fff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0px 0px 10px rgba(230, 184, 0, 0.3);
+            margin-bottom: 1rem;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+        
+        nav a:hover {
+            color: #e6b800;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .main-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            font-size: 2.5rem;
+            color: #e6b800;
+        }
+        
+        .haircuts-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .haircut-card {
+            background-color: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        
+        .haircut-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(230, 184, 0, 0.3);
+        }
+        
+        .haircut-img {
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .haircut-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .haircut-card:hover .haircut-img img {
+            transform: scale(1.1);
+        }
+        
+        .haircut-info {
+            padding: 1.5rem;
+        }
+        
+        .haircut-info h3 {
+            margin-bottom: 0.5rem;
+            color: #e6b800;
+        }
+        
+        .haircut-info p {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        footer {
+            background: linear-gradient(to right, #000, #333, #000);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            color: #e6b800;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .haircuts-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fondo con elementos de peluquería -->
+    <div class="background" id="background"></div>
+    
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>PELUQUERÍA SERSHI</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#INICIO">Inicio</a></li>
+                <li><a href="#CORTES">Estilos de Corte</a></li>
+                <li><a href="#SERVICIOS">Servicios</a></li>
+                <li><a href="#CONTACTO">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sección principal - Estilos de corte -->
+    <section class="main-section" id="cortes">
+        <h2 class="section-title">NUESTROS ESTILOS DE CORTE</h2>
+        
+        <div class="haircuts-gallery">
+            <!-- Corte 1 -->
+            <div class="haircut-card">
+                <div class="haircut-img">
+                    <img src="C:\Users\CIRO\Pictures\1cb01673a46c9f54aba87136e2eded82.jpg"alt="Corte Moderno">
+                </div>
+                <div class="haircut-info">
+                    <h3>Corte Moderno</h3>
+                    <p>Un estilo vanguardista que realza tu personalidad con líneas definidas y volumen controlado.</p>
+                    <p class="price">Desde 5000</p>
+                </div>
+            </div>
+            
+            <!-- Corte 2 -->
+            <div class="haircut-card">
+                <div class="haircut-img">
+                    <img src="C:\Users\CIRO\Pictures\images (1).jfif" alt="Degradado">
+                </div>
+                <div class="haircut-info">
+                    <h3>Degradado</h3>
+                    <p>Transición perfecta de diferentes longitudes para un look fresco y actual.</p>
+                    <p class="price">Desde 5000</p>
+                </div>
+            </div>
+            
+            <!-- Corte 3 -->
+            <div class="haircut-card">
+                <div class="haircut-img">
+                    <img src="C:\Users\CIRO\Pictures\2462401791796880b704171923c9d6b4.jpg" alt="Bob Clásico">
+                </div>
+                <div class="haircut-info">
+                    <h3>Bob Clásico</h3>
+                    <p>El corte icónico que nunca pasa de moda, adaptado a tu tipo de rostro.</p>
+                    <p class="price">Desde 5000</p>
+                </div>
+            </div>
+            
+            <!-- Corte 4 -->
+            <div class="haircut-card">
+                <div class="haircut-img">
+                    <img src="C:\Users\CIRO\Pictures\cortes-de-pelo-pixie-otono-invierno-2021-2022-FOTO-pelo-tenido-istock-840x1024.jpg" alt="Pixie">
+                </div>
+                <div class="haircut-info">
+                    <h3>Pixie</h3>
+                    <p>Corte corto y atrevido que destaca tus facciones y simplifica tu rutina diaria.</p>
+                    <p class="price">Desde 5000</p>
+                </div>
+            </div>
+            
+            <!-- Corte 5 -->
+            <div class="haircut-card">
+                <div class="haircut-img">
+                    <img src="C:\Users\CIRO\Pictures\images (2).jfif" alt="Melena a Capas">
+                </div>
+                <div class="haircut-info">
+                    <h3>Melena a Capas</h3>
+                    <p>Volumen y movimiento para cabellos largos con técnicas de corte personalizadas.</p>
+                    <p class="price">Desde 35€</p>
+                </div>
+            </div>
+            
+            <!-- Corte 6 -->
+            <div class="haircut-card">
+                <div class="haircut-img">
+                    <img src="C:\Users\CIRO\Pictures\M3DKKBOEDRBF3GLNQQFHKBBB3E.jpg" alt="Undercut">
+                </div>
+                <div class="haircut-info">
+                    <h3>Undercut</h3>
+                    <p>Estilo urbano con rapado lateral y longitud en la parte superior para un look audaz.</p>
+                    <p class="price">Desde 22€</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de servicios adicionales -->
+    <section class="main-section" id="servicios">
+        <h2 class="section-title">NUESTROS SERVICIOS</h2>
+        
+        <div class="haircuts-gallery">
+            <!-- Servicio 1 -->
+            <div class="haircut-card">
+                <div class="haircut-img">
+                    <img src="C:\Users\CIRO\Pictures\images (3).jfif" alt="Coloración">
+                </div>
+                <div class="haircut-info">
+                    <h3>Coloración</h3>
+                    <p>Técnicas avanzadas de coloración con productos de alta calidad para resultados duraderos.</p>
+                    <p class="price">Desde 10000</p>
+                </div>
+            </div>
+            
+            <!-- Servicio 2 -->
+            <div class="haircut-card">
+                <div class="haircut-img">
+                    <img src="C:\Users\CIRO\Pictures\images (4).jfif" alt="Tratamientos">
+                </div>
+                <div class="haircut-info">
+                    <h3>Tratamientos Capilares</h3>
+                    <p>Hidratación, nutrición y reparación para todo tipo de cabellos con productos profesionales.</p>
+                    <p class="price">Desde 10000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pie de página con información de contacto -->
+    <footer id="contacto">
+        <h2 class="section-title">CONTACTO</h2>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>GABRIELA MISTRAL , Ciudad</p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>+54 1166570460</p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <p>Lun-Sáb: 10:00 - 20:00</p>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>info@peluqueriasershi.com</p>
+            </div>
+        </div>
+        
+        <p>&copy; 2025 PELUQUERÍA SERSHI - Todos los derechos reservados</p>
+    </footer>
+    
+    <script>
+        // Crear el fondo con elementos de peluquería (tijeras, uñas, etc.)
+        document.addEventListener('DOMContentLoaded', function() {
+            const background = document.getElementById('background');
+            const elements = [
+                { icon: 'fas fa-cut', rotate: true },
+                { icon: 'fas fa-hand-sparkles', rotate: false },
+                { icon: 'fas fa-spray-can', rotate: true },
+                { icon: 'fas fa-brush', rotate: true },
+                { icon: 'fas fa-pump-soap', rotate: false }
+            ];
+            
+            // Crear 25 elementos para el fondo
+            for (let i = 0; i < 25; i++) {
+                const element = elements[Math.floor(Math.random() * elements.length)];
+                const el = document.createElement('i');
+                el.className = element.icon;
+                
+                // Posición aleatoria
+                const top = Math.random() * 100;
+                const left = Math.random() * 100;
+                
+                // Tamaño aleatorio
+                const size = Math.random() * 30 + 20;
+                
+                // Estilo
+                el.style.position = 'absolute';
+                el.style.top = ${top}%;
+                el.style.left = ${left}%;
+                el.style.fontSize = ${size}px;
+                el.style.color = 'rgba(255, 255, 255, 0.15)';
+                
+                if (element.rotate) {
+                    const rotation = Math.random() * 360;
+                    el.style.transform = rotate(${rotation}deg);
+                }
+                
+                background.appendChild(el);
+            }
+        });
+    </script>
+</body>
+</html>
